@@ -50,3 +50,16 @@ galera-lb:
   links:
   - galera:galera
   stdin_open: true
+
+app:
+  image: "${app_image}"
+  environment:
+    MYSQL_HOST: ${mysql_host}"
+    MYSQL_PORT: ${mysql_port}"
+    MYSQL_ROOT_PASSWORD: "${mysql_root_password}"
+    MYSQL_DATABASE: "${mysql_database}"
+    MYSQL_USER: "${mysql_user}"
+    MYSQL_PASSWORD: "${mysql_password}"
+  labels:
+    io.rancher.container.hostname_override: container_name
+  tty: true

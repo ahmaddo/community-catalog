@@ -24,6 +24,24 @@
       required: true
       label: "MySQL DB Password"
       description: "Password for the MySQL user of the created database"
+    - variable: "mysql_host"
+      type: string
+      required: true
+      default: "galera-lb"
+      label: "MySQL DB Host"
+      description: "Host address to database"
+    - variable: "mysql_port"
+      type: string
+      required: true
+      default: "3306"
+      label: "MySQL DB Port"
+      description: "Port to MySQL Host"
+    - variable: "app_image"
+      type: string
+      required: true
+      default: "alpine:latest"
+      label: "Application image"
+      description: "Application image to use with galera"
 galera:
   scale: 3
   metadata:
