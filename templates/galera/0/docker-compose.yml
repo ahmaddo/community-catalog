@@ -54,8 +54,8 @@ galera-lb:
 app:
   image: "${app_image}"
   environment:
-    MYSQL_HOST: ${mysql_host}"
-    MYSQL_PORT: ${mysql_port}"
+    MYSQL_HOST: "galer-lb"
+    MYSQL_PORT: 3306
     MYSQL_ROOT_PASSWORD: "${mysql_root_password}"
     MYSQL_DATABASE: "${mysql_database}"
     MYSQL_USER: "${mysql_user}"

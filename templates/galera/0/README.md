@@ -17,3 +17,18 @@ The replication mechanism used in the cluster is based on the MySQL dump method.
 Once deployed, use a mysql client to connect:
 
 `mysql -u<db_user> -p -h<galera-lb>`
+
+In application use following environment variables:
+
+`MYSQL_HOST` and `MYSQL_PORT`
+
+
+```php
+<?php
+
+$USERNAME = "root";
+$PASSWORD = "";
+$HOST = getenv('MYSQL_HOST');
+$DB_PORT = getenv('MYSQL_PORT');
+...
+```
